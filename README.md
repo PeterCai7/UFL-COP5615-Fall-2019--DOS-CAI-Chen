@@ -1,8 +1,150 @@
 Important things to show:
 1. group members: Ju Cai (UFID: 9669-1796), Tianyang Chen(UFID: 4925-2917).
-2. The number of worker actors that we created:
+    steps to run our program:
+2. The number of worker actors that we created: 100 worker actors.
 3. Size of the work unit of each worker actor that you determined results in best performance for your implementation and an explanation on how you determined it. Size of the work unit refers to the number of sub-problems that a worker gets in a single request from the boss.
+   Firstly we created 10 worker actors and each of them gets 10000 sub-problems. Then we increased worker actors from 10 to 100. Since the real run-time of 100 workers is less than that of 10, I determined to go this way.
 4. The result of running your program for: mix run proj1.exs 100000 200000.
+153436  356 431
+152608  251 608
+146137  317 461
+156240  240 651
+115672  152 761
+173250  231 750
+118440  141 840
+175329  231 759
+172822  221 782
+120600  201 600
+129640  140 926
+125248  152 824
+117067  167 701
+108135  135 801
+105210  210 501
+131242  311 422
+104260  260 401
+126027  201 627
+150300  300 501
+124483  281 443
+102510  201 510
+136525  215 635
+123354  231 534
+110758  158 701
+116725  161 725
+192150  210 915
+180225  225 801
+133245  315 423
+182250  225 810
+190260  210 906
+193257  327 591
+145314  351 414
+140350  350 401
+174370  371 470
+132430  323 410
+152685  261 585
+156289  269 581
+146952  156 942
+162976  176 926
+125433  231 543
+105264  204 516
+129775  179 725
+136948  146 938
+186624  216 864
+180297  201 897
+134725  317 425
+125460  204 615 246 510
+126846  261 486
+197725  275 719
+105750  150 705
+125500  251 500
+182650  281 650
+135828  231 588
+135837  351 387
+156915  165 951
+163944  396 414
+193945  395 491
 5. Report the running time for the above problem (4). The ratio of CPU time to REAL TIME tells you how many cores were effectively used in the computation. If you are close to 1 you have almost no parallelism (points will be subtracted).
-6. The largest problem you managed to solve (For example You can try finding out bigger vampire numbers than 200000).
+   CPU time : 3.266s. REAL time: 1.358s. Ratio: 3.266/1.358 = 2.40. 
+6. The largest problem you managed to solve (For example You can try finding out bigger vampire numbers than 200000). We tried to run our program in range of 100000 to 300000. And find vampire numbers larger than 200000.
+226498  269 842
+260338  323 806
+192150  210 915
+218488  248 881
+180225  225 801
+182250  225 810
+190260  210 906
+193257  327 591
+174370  371 470
+117067  167 701
+108135  135 801
+105210  210 501
+131242  311 422
+125248  152 824
+133245  315 423
+104260  260 401
+150300  300 501
+145314  351 414
+136525  215 635
+215860  251 860
+229648  248 926
+140350  350 401
+245182  422 581
+123354  231 534
+263074  437 602
+146137  317 461
+126027  201 627
+156240  240 651
+173250  231 750
+296320  320 926
+175329  231 759
+213466  341 626
+216733  323 671
+253750  350 725
+118440  141 840
+153436  356 431
+180297  201 897
+286416  468 612
+241564  461 524
+132430  323 410
+105264  204 516
+102510  201 510
+124483  281 443
+217638  321 678
+156289  269 581
+186624  216 864
+197725  275 719
+125433  231 543
+120600  201 600
+129640  140 926
+205785  255 807
+284598  489 582
+125460  204 615 246 510
+115672  152 761
+152608  251 608
+251896  296 851
+125500  251 500
+201852  252 801
+116725  161 725
+226872  276 822
+172822  221 782
+110758  158 701
+182650  281 650
+233896  338 692
+152685  261 585
+211896  216 981
+262984  284 926
+134725  317 425
+129775  179 725
+136948  146 938
+254740  470 542
+284760  420 678
+135828  231 588
+135837  351 387
+193945  395 491
+163944  396 414
+162976  176 926
+105750  150 705
+146952  156 942
+156915  165 951
+126846  261 486
 7. (Optional)- You could also inspect your code with observer (using- :observer.start) and attach a screenshot of CPU utilization chart.
+ 
