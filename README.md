@@ -1,1 +1,1 @@
-Project 1: issued on August 26th, 2019. Due date: September, 7th.
+For project requirements, see Project2.pdf.
