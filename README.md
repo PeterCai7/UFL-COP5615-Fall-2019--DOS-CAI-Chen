@@ -1,1 +1,1 @@
-For project requirements, see Project2.pdf.
+see complete description in pdf. 
