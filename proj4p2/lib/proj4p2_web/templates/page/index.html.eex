@@ -1,0 +1,122 @@
+<style type="text/css">
+  /* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #0000FF;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+<header class="header">
+           <nav role="navigation">
+             <ul class="nav nav-pills pull-right">
+               <button id="simulate">Simulate Start</button>
+               <div id="welcome" > Welcome</div>
+               <div align="right"><button style="text-decoration: underline;background: none;
+           border: none;padding: 0;color: #417e99;display:none;" id="logOut" >Log Out</button></div>
+               <%# <li><a href="./tweeter">Check Tweets As A Guest!</a></li> %>
+             </ul>
+           </nav>
+           <span class="logo"></span>
+         </header>
+         <div class="phx-hero">
+           <div align="center">
+             <h2 value = "Welcome to Tweeter World" id="title"></h2>
+             <%# <div id = "loginDiv"></div> %>
+               <div>
+
+                 <input type="text" placeholder="username" id="username"/>
+                 <button id="login">Log In</button>
+               </div>
+               <div>
+                 <div id="tweetControl" style="display:none">
+                  <!-- Tab links -->
+                  <div class="tab">
+                    <button class="tablinks" onclick="openCity(event, 'London')">Sending Tweets</button>
+                    <button class="tablinks" onclick="openCity(event, 'Paris')">Query</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Geting Information</button>
+                  </div>
+
+                  <!-- Tab content -->
+                  <div id="London" class="tabcontent">
+                    <input type="text"  placeholder="Your Tweet" id="tweet"  class="form-control" style="display:none">
+                    <input type="text" placeholder="@" id="mention"/>
+                    <input type="text" placeholder="#" id="hashtag"/>
+                    <button id="send">Send Tweet</button>
+                  </div>
+
+                  <div id="Paris" class="tabcontent">
+                    <button id="queryAllMyTweets">Query All My Tweets</button>
+                    <button id="queryBySubscribe">Query By Subscribe</button><br>
+                    <input type="text" placeholder="@" id="mention2"/>
+                    <button id="queryByMention">Query By Mention </button>
+                    <input type="text" placeholder="#" id="hashtag2"/>
+                    <button id="queryByHashtag">Query By Hashtag</button>
+                  </div>
+
+                  <div id="Tokyo" class="tabcontent">
+                    <button id="userlist">Get the UserList</button>
+                    <button id="mentionList">Get the Mention</button>
+                    <button id="HashtagList">Get the HashTag</button>
+                  </div>
+                 </div>
+               </div>
+           </div>
+         </div>
+
+         <div class="phx-hero">
+           <ul id='allTweet' align="left" style='transform: rotate(0deg);list-style: none; min-height:200px; padding: 10px;'></ul>
+         </div>
+
+         <script>
+         function retweet() {
+           console.log(this)
+         }
+         function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+         </script>
